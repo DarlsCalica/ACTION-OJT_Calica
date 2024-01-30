@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Card, Col, Container, Row } from 'react-bootstrap'
-import'./style/home.css'
+import'./style/style.css'
 import { useNavigate } from 'react-router-dom';
 import NaviButton from './components/button';
 
