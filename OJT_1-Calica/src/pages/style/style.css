@@ -27,12 +27,22 @@
 }
 .Buttons{
     margin-bottom: 40px;
+    font-family: 'Pixelify Sans', sans-serif;
+    width: 200px;
+    display: flex;
 }
 
-button{
-      width: 400px;
-      
+.about{
+
+    padding: 20px;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    margin-bottom: 123px;
+    border-radius: 15px;
 }
+
+
 
 /* HOBBIES PAGE */
 
@@ -75,5 +85,16 @@ button{
 .hobbyTitle{
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 30px;
+    word-spacing: 12px;
+}
+
+.hobbiecards{
+    display: flex;
+    justify-content: center;
+}
+
+.hobbyEnd{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 60px;
     word-spacing: 12px;
 }
