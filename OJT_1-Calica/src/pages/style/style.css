@@ -1,6 +1,7 @@
 
 *{
     text-align: center; 
+    background-color: #F9F6EE;
     
 }
 
@@ -59,13 +60,20 @@ button{
 .trans{
     margin-top: 20px;
     margin-bottom: 20px;
-   
+
 }
 
 #translation{
     margin-bottom:20px ;
+
 }
 #translation p{
     font-weight: 900;
     font-size: 20px;
+}
+
+.hobbyTitle{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 30px;
+    word-spacing: 12px;
 }
