@@ -8,7 +8,7 @@ interface Button{
 
 const NaviButton: React.FC<Button> = ({ label, onClick }) => {
     return (
-        <Button variant="success" size="lg" onClick={onClick}>
+        <Button style={{width: '200px', fontFamily: 'Pixelify Sans'}} variant="outline-dark" onClick={onClick}>
         {label}
       </Button>
   );
