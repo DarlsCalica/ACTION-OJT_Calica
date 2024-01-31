@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { Button, Col, Collapse, Container, Row } from 'react-bootstrap'
 import TransButton from './components/translate'
 import HobbyCard from './components/hobbyCards';
@@ -7,8 +7,8 @@ import eiga from './style/picture/eiga.jpg';
 import gemu from './style/picture/gemu.jpg';
 import anime from './style/picture/anime.jpg'
 import geijutsu from './style/picture/Geijutsu2.jpg'
-import NaviButton from './components/button';
 import { useNavigate } from 'react-router-dom';
+import HomeButton from './components/homebutton';
 
 export default function Hobbies() {
     const [open, setOpen] = useState(false);
@@ -17,8 +17,11 @@ export default function Hobbies() {
   return (
    <Container fluid>
     {/* Title */}
-        <Row>
-          <NaviButton label='Home' onClick={() => navigate("/")} />
+        <Row style={{width: '140px'}}>
+          <div style={{marginTop: '20px'}}>
+            <HomeButton label='Home' onClick={() => navigate("/")} />
+          </div>
+          
         </Row>
         <Row>
             <div className="aboutTitle">
@@ -35,6 +38,7 @@ export default function Hobbies() {
             {/* Collapse Button with Translation */}
             <Button className='trans'
             style={{fontFamily: 'Barlow'}}
+            variant='dark'
         onClick={() => setOpen(!open)}
         aria-controls="example-collapse-text"
         aria-expanded={open}>
@@ -62,7 +66,8 @@ export default function Hobbies() {
         </Row>
         {/* The Hobbies */}
         <Row style={{margin:'auto'}}>
-          <Col>
+        <div className="hobbiecards">
+               <Col>
             <HobbyCard titleCard='おんがく' desc='I like listening to music, and I can quite say I have a flexible music taste' trans='Listening to Music' image = {ongaku} />
           </Col>
           <Col>
@@ -77,7 +82,17 @@ export default function Hobbies() {
           <Col>
             <HobbyCard titleCard='げいじゅつ' desc='This is my favorite hobby. I love being creative and explore other mediums. My favorite is painting (oil, acrylic, watercolor) and sketching.' trans='Art' image = {geijutsu} />
           </Col>
+          </div>
         </Row>
+        <Row style={{ margin: 'auto'}}>
+          <div className="hobbyEnd">
+          どうぞ よろしく おねがいします。🍪
+          </div>
+          <div className="transButHob"
+        style={{marginTop: '8px', marginBottom: '29px'}}>
+          <TransButton label='Pleased to meet you' />
+          </div>
+          </Row>
    </Container>
   )
 }
