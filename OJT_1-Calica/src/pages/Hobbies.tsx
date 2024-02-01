@@ -16,13 +16,13 @@ export default function Hobbies() {
 
   return (
    <Container fluid>
-    {/* Title */}
+    {/* Home Button */}
         <Row style={{width: '140px'}}>
           <div style={{marginTop: '20px'}}>
             <HomeButton label='Home' onClick={() => navigate("/")} />
           </div>
-          
         </Row>
+    {/* Title */}
         <Row>
             <div className="aboutTitle">
             ABOUT ME
@@ -35,7 +35,7 @@ export default function Hobbies() {
             わたし  の  なまえ  は  カリカ  ダルリン です。<br />
             Baguio City から きました。<br />
             わたし は 22歳 です。<br />
-            {/* Collapse Button with Translation */}
+    {/* Collapse Button with Translation */}
             <Button className='trans'
             style={{fontFamily: 'Barlow'}}
             variant='dark'
@@ -54,7 +54,7 @@ export default function Hobbies() {
       </Collapse>  
             </div>
         </Row>
-        {/* Hobbies Title */}
+    {/* Hobbies Title */}
         <Row style={{ margin: 'auto'}}>
           <div className="hobbyTitle">
           わたし   の   しゅみ は...
@@ -64,7 +64,7 @@ export default function Hobbies() {
           <TransButton label='My hobbies are...' />
           </div>
         </Row>
-        {/* The Hobbies */}
+    {/* The Hobbies */}
         <Row style={{margin:'auto'}}>
         <div className="hobbiecards">
                <Col>

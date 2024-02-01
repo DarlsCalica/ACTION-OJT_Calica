@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <Container fluid>
-     {/* Title and Author */}
+  {/* Title and Author */}
      <Row style={{margin: 'auto'}}>
         <div className='title'>
           DIGITAL TRANSFORMATION
@@ -21,7 +21,7 @@ export default function Home() {
             Created By: Darlene Louise M. Calica
         </div>
        </Row>
-      {/* Buttons */}
+  {/* Buttons */}
       <Row style={{width: '60vh' ,margin:'auto'}}>
         <div className="Buttons">
           <Col style={{}}>
@@ -33,7 +33,7 @@ export default function Home() {
          </div>
       </Row>
 
-        {/* About me */}
+  {/* About me */}
         <Row style={{width: '90vh', margin: 'auto'}}>
      <div className="about">
               <div className="abTitle" style={{fontFamily:'Workbench', fontSize:'30px', fontWeight:'400'}}>
