@@ -4,14 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Form from "./components/Form";
 
-interface THEME {
-  theme: "themeCalc";
-}
-
 export default function Calculator() {
 
   const navigate = useNavigate();
-  const [dataTheme, setDataTheme] = useState<THEME["theme"]>("themeCalc");
   const [output, setOutput] = useState<string>("0");
   const [passed, setPassed] = useState<boolean>(false);
 
@@ -165,9 +160,6 @@ export default function Calculator() {
     }
   };
 
-  const handleActiveTheme = (theme: THEME["theme"]) => {
-    setDataTheme(theme);
-  };
   
   return (
       <Container fluid>
@@ -198,24 +190,5 @@ export default function Calculator() {
       </Container>
     
   )
-}
-function handleInitialZero(value: string, prevOutput: string): string {
-  throw new Error("Function not implemented.");
-}
-
-function handleArithmeticOperatorLimit(newOutput: string): string {
-  throw new Error("Function not implemented.");
-}
-
-function handleDecimalLimits(value: string, newOutput: string): string {
-  throw new Error("Function not implemented.");
-}
-
-function handleNumberLimit(newOutput: string): string {
-  throw new Error("Function not implemented.");
-}
-
-function handleClearResult(value: string, prevOutput: string) {
-  throw new Error("Function not implemented.");
-}
+  }
 

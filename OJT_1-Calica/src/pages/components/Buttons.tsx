@@ -149,29 +149,32 @@ const Buttons = ({ handleButtonClick, reset, del, equalfn }: Props) => {
   ];
   return (
     <div className="buttons">
-      {buttonValues.map((btn, index) => (
-        <>
-          <Button
-            key={`${index}_${btn.title}`}
-            type="button"
-            variant="outline-dark"
-            id={btn.id}
-            onClick={
-              btn.action !== undefined
-                ? btn.action
-                : () => handleButtonClick(btn.value)
-            }
-            title={btn.title}
-            aria-describedby={btn.descriptionId}
-          >
-            {btn.value}
-          </Button>
-          <span id={btn.descriptionId} className="visually-hidden">
-            {btn.description}
-          </span>
-        </>
-      ))}
-    </div>
+  <div className="grid-container">
+    {buttonValues.map((btn, index) => (
+      <Button
+        key={`${index}_${btn.title}`}
+        type="button"
+        variant="outline-dark"
+        id={btn.id}
+        onClick={
+          btn.action !== undefined
+            ? btn.action
+            : () => handleButtonClick(btn.value)
+        }
+        title={btn.title}
+        aria-describedby={btn.descriptionId}
+      >
+        {btn.value}
+      </Button>
+    ))}
+  </div>
+  {buttonValues.map((btn, index) => (
+    <span key={`description_${index}`} id={btn.descriptionId} className="visually-hidden">
+      {btn.description}
+    </span>
+  ))}
+</div>
+
   );
 };
 

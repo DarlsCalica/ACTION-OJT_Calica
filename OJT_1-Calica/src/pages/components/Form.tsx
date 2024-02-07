@@ -1,3 +1,4 @@
+import { Row } from "react-bootstrap";
 import Buttons from "./Buttons";
 
 interface Props {
@@ -10,11 +11,13 @@ interface Props {
 
 const Form = ({ output, handleButtonClick, reset, del, equalfn }: Props) => {
   return (
-    <form className="calculator" aria-label="Calculator">
+    <form className="calculator">
       <div className="screen" tabIndex={0}>
-        <output id="display" aria-live="polite">
-          {output}
-        </output>
+      <Row style={{width: '40vh',height: '5vh', margin: 'auto'}}>
+        <div className="display">
+        {output}
+        </div>
+      </Row>
       </div>
       <Buttons
         handleButtonClick={handleButtonClick}
