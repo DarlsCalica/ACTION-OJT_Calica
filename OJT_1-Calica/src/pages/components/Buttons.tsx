@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 
 interface Props {
   handleButtonClick: (value: string) => void;
@@ -150,9 +151,10 @@ const Buttons = ({ handleButtonClick, reset, del, equalfn }: Props) => {
     <div className="buttons">
       {buttonValues.map((btn, index) => (
         <>
-          <button
+          <Button
             key={`${index}_${btn.title}`}
             type="button"
+            variant="outline-dark"
             id={btn.id}
             onClick={
               btn.action !== undefined
@@ -163,7 +165,7 @@ const Buttons = ({ handleButtonClick, reset, del, equalfn }: Props) => {
             aria-describedby={btn.descriptionId}
           >
             {btn.value}
-          </button>
+          </Button>
           <span id={btn.descriptionId} className="visually-hidden">
             {btn.description}
           </span>
