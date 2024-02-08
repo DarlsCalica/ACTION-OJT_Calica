@@ -13,7 +13,7 @@ const Form = ({ output, handleButtonClick, reset, del, equalfn }: Props) => {
   return (
     <form className="calculator">
       <div className="screen" tabIndex={0}>
-      <Row style={{width: '40vh',height: '5vh', margin: 'auto'}}>
+      <Row style={{width: '40vh',height: '10vh', margin: 'auto'}}>
         <div className="display">
         {output}
         </div>
